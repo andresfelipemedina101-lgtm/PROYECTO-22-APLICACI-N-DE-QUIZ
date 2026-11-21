@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <main class="contenedor">
+        <section id="pantallaInicio" class="tarjeta">
+            <h1>Quiz de Desarrollo Web</h1>
+            <p>Pon a prueba tus conocimientos de HTML, CSS y JavaScript.</p>
+            <ul>
+                <li>Número de preguntas: <span id="totalPreguntas">0</span></li>
+                <li>Tienes 1 minuto para responder cada pregunta.</li>
+                <li>Cada respuesta correcta suma 1 punto.</li>
+                <li>Si se acaba el tiempo, pasas a la siguiente y se resta 1 punto.</li>
+            </ul>
+            <button id="btnComenzar">Comenzar</button>
+        </section>
+
+        <section id="pantallaPregunta" class="tarjeta oculto">
+            <div class="info">
+                <span id="progreso"></span>
+                <span id="tiempo"></span>
+                <span id="puntaje"></span>
+            </div>
+            <h2 id="textoPregunta"></h2>
+            <div id="opciones" class="opciones"></div>
+            <p id="mensaje"></p>
+            <button id="btnSiguiente" class="oculto">Siguiente</button>
+        </section>
+
+        <section id="pantallaResultados" class="tarjeta oculto">
+            <h2>Resultados</h2>
+            <p id="puntajeFinal"></p>
+            <ul id="listaResultados" class="resultados"></ul>
+            <button id="btnReiniciar">Volver a intentar</button>
+        </section>
+    </main>
+
+    <script src="js/preguntas.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
